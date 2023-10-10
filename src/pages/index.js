@@ -3,6 +3,8 @@ import Head from 'next/head'
 import Image from 'next/image'
 import profile from '../../public/images/profile/developer-pic-1.png'
 import AnimatedText from '@/components/AnimatedText'
+import Link from 'next/link'
+import { LinkArrow } from '@/components/Icons'
 
 export default function Home() {
   return (
@@ -19,10 +21,33 @@ export default function Home() {
             </div>
             <div className='w-1/2 flex flex-col justify-center items-center self-center'>
               <AnimatedText text={"Turning Vision Into Reality With Code And Design."} className='!text-5xl !text-left'/>
-              <p>As a skilled full-stack developer, I am dedicated to turning ideas into innovative web applications.
+              <p className='my-2 text-base font-semibold'>As a skilled full-stack developer, I am dedicated to turning ideas into innovative web applications.
                 Explore my latest projects and articles, showcasing my expertise in React.js and web development.
               </p>
+
+            <div className='flex w-full items-center self-start mt-4 space-x-8'>
+              <Link href={"/dummy.pdf"} target='_blank'
+              className='bg-dark text-light p-2.5 px-6 rounded-lg flex
+              hover:bg-light hover:text-dark font-bold text-xl border-2 border-transparent hover:border-dark
+              '
+              download={true}
+              >
+                Resume
+                <LinkArrow className={"ml-1"}/>
+  
+              </Link>
+
+              <Link href={"mailto:anojbudathoki17@gmail.com"} target='_blank'
+              className='bg-dark text-light p-2.5 px-6 rounded-lg flex
+              hover:bg-light hover:text-dark font-bold text-xl border-2 border-transparent hover:border-dark
+              '
+              >
+                Contact  
+              </Link>
+             
             </div>
+            </div>
+
           </div>
         </Layout>
       </main>
