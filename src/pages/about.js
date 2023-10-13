@@ -5,6 +5,8 @@ import Image from 'next/image'
 import profilePic from '../../public/images/profile/developer-pic-2.png'
 import { useInView, useMotionValue, useSpring } from 'framer-motion'
 import Skill from '@/components/Skill'
+import Experience from '@/components/Experience'
+import Education from '@/components/Education'
 
 const AnimatedNum = ({ value }) => {
 
@@ -88,6 +90,8 @@ const about = () => {
                     </div>
                 </div>
                 <Skill />
+                <Experience />
+                <Education />
 
             </Layout>
         </main>
