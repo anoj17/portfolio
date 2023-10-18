@@ -22,9 +22,9 @@ export default function Home() {
             <div className='w-1/2'>
               <Image src={profile} alt='profile' className='w-full h-auto' />
             </div>
-            <div className='w-1/2 flex flex-col justify-center items-center self-center'>
-              <AnimatedText text={"Turning Vision Into Reality With Code And Design."} className='!text-5xl !text-left' />
-              <p className='my-2 text-base font-semibold'>As a skilled full-stack developer, I am dedicated to turning ideas into innovative web applications.
+            <div className='w-1/2 flex flex-col justify-center items-center self-center '>
+              <AnimatedText text={"Turning Vision Into Reality With Code And Design."} className='!text-5xl !text-left'/>
+              <p className='my-2 text-base font-semibold dark:text-light'>As a skilled full-stack developer, I am dedicated to turning ideas into innovative web applications.
                 Explore my latest projects and articles, showcasing my expertise in React.js and web development.
               </p>
 
@@ -32,6 +32,7 @@ export default function Home() {
                 <Link href={"/dummy.pdf"} target='_blank'
                   className='bg-dark text-light p-2.5 px-6 rounded-lg flex
               hover:bg-light hover:text-dark font-bold text-xl border-2 border-transparent hover:border-dark
+              dark:bg-light dark:text-dark dark:hover:border-light dark:hover:bg-dark dark:hover:text-light
               '
                   download={true}
                 >
@@ -43,6 +44,7 @@ export default function Home() {
                 <Link href={"mailto:anojbudathoki17@gmail.com"} target='_blank'
                   className='bg-dark text-light p-2.5 px-6 rounded-lg flex
               hover:bg-light hover:text-dark font-bold text-xl border-2 border-transparent hover:border-dark
+              dark:bg-light dark:text-dark dark:hover:border-light dark:hover:bg-dark dark:hover:text-light
               '
                 >
                   Contact

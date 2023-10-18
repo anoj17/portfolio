@@ -17,7 +17,7 @@ const ref = useRef(null)
             whileInView={{y:0}}
             transition={{ duration: 1.5, type:"spring"}}
             >
-                <h2 className='font-bold text-2xl'>{position}&nbsp; <a href={companyLink} target='_blank' className=' text-primary'>@{company}</a></h2>
+                <h2 className='font-bold text-2xl'>{position}&nbsp; <a href={companyLink} target='_blank' className=' text-primary dark:text-primaryDark'>@{company}</a></h2>
                 <span className='text-dark/75 font-semibold'>{time} | {address}</span>
                 <p className='w-full font-medium'>{work}</p>
             </motion.div>
@@ -44,7 +44,7 @@ const Experience = () => {
 
             <div ref={ref} className='w-[75%] mx-auto relative my-16'>
 
-                <motion.div style={{scaleY: scrollYProgress }}  className='w-1 rounded-full origin-top h-full bg-dark absolute top-0 left-9' />
+                <motion.div style={{scaleY: scrollYProgress }}  className='w-1 dark:bg-light rounded-full origin-top h-full bg-dark absolute top-0 left-9' />
                 <ul className='w-full flex flex-col items-start justify-between ml-5'>
                     <Details
                         position={"Software Engineer"}

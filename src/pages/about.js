@@ -38,13 +38,13 @@ const AnimatedNum = ({ value }) => {
 const about = () => {
     return <>
 
-        <main>
+        <main className='flex flex-col items-center justify-center dark:text-light w-full'>
 
-            <Layout className='pt-10'>
+            <Layout className='pt-10 '>
                 <AnimatedText text='Passion Fuels Purpose!' className='!text-7xl' />
                 <div className='grid grid-cols-8 gap-16 w-full h-auto my-9'>
                     <div className='col-span-3 flex flex-col justify-start items-start'>
-                        <h1 className='font-bold text-dark/75 text-2xl mb-3'>Biography</h1>
+                        <h1 className='font-bold text-dark/75 text-2xl mb-3 dark:text-light-75'>Biography</h1>
                         <p>
                             Hi, I'm CodeBucks, a web developer and UI/UX designer with a passion for creating beautiful, functional,
                             and user-centered digital experiences. With 4 years of experience in the field. I am always looking for
@@ -63,9 +63,9 @@ const about = () => {
                         </p>
                     </div>
 
-                    <div className=' col-span-3 relative rounded-2xl h-max bg-light border-2 border-solid border-dark p-7'>
+                    <div className=' col-span-3 relative rounded-2xl h-max bg-light border-2 border-solid border-dark p-7 dark:bg-dark dark:border-light'>
                         {/* <div className='absolute top-0 -right-3 w-[103%] h-[103%] bg-dark rounded-2xl -z-10'/> */}
-                        <Image src={profilePic} alt='profile' className='w-full h-auto rounded-2xl bg-dark' />
+                        <Image src={profilePic} alt='profile' className='w-full h-auto rounded-2xl bg-dark dark:bg-light' />
                     </div>
 
                     <div className='flex flex-col items-end justify-between col-span-2 py-4'>
@@ -73,19 +73,19 @@ const about = () => {
                             <span className='text-5xl font-bold'>
                                 <AnimatedNum value={'50'} />%
                             </span>
-                            <h1 className='text-xl text-dark/75'>Satisfied Clients</h1>
+                            <h1 className='text-xl text-dark/75 dark:text-light/75'>Satisfied Clients</h1>
                         </div>
                         <div className='flex flex-col items-end justify-center space-y-3'>
                             <span className='text-5xl font-bold'>
                                 <AnimatedNum value={'45'} />%
                             </span>
-                            <h1 className='text-xl text-dark/75'>Project Completed</h1>
+                            <h1 className='text-xl text-dark/75 dark:text-light/75'>Project Completed</h1>
                         </div>
                         <div className='flex flex-col items-end justify-center space-y-3'>
                             <span className='text-5xl font-bold'>
                                 <AnimatedNum value={'5'} />%
                             </span>
-                            <h1 className='text-xl text-dark/75'>Years of experience</h1>
+                            <h1 className='text-xl text-dark/75 dark:text-light/75'>Years of experience</h1>
                         </div>
                     </div>
                 </div>

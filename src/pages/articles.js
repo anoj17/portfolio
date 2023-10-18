@@ -52,11 +52,11 @@ const Article = ({ link, title, date, img }) => {
   return (
 
     <li className='w-full first:mt-0 flex relative justify-between items-center border-r-4 border-b-4 border border-dark border-solid p-5
-    m-5 rounded-2xl text-dark bg-light
+    m-5 rounded-2xl text-dark bg-light dark:bg-dark dark:border-light dark:text-light
     '>
       <MovingImg img={img} link={link} title={title}
       />
-      <span className='text-primary font-semibold'>{date}</span>
+      <span className='text-primary dark:text-primaryDark font-semibold'>{date}</span>
     </li>
   )
 }
@@ -65,7 +65,9 @@ const Featured = ({ link, img, time, summary, title }) => {
 
   return <>
 
-    <li className='col-span-1 w-full p-4 border-dark bg-light border border-solid rounded-3xl'>
+    <li className='col-span-1 w-full p-4 border-dark bg-light border border-solid rounded-3xl
+    dark:bg-dark dark:border-light dark:text-light
+    '>
       <Link href={link} className='w-full cursor-pointer overflow-hidden rounded-lg'>
         <MotionImg src={img} alt='image' className='w-full h-auto rounded-lg'
           whileHover={{ scale: 1.03 }}
@@ -73,10 +75,10 @@ const Featured = ({ link, img, time, summary, title }) => {
         />
       </Link>
       <Link href={link}>
-        <h2 className='font-bold my-2 text-3xl hover:underline underline-offset-2 text-dark'>{title}</h2>
+        <h2 className='font-bold my-2 text-3xl hover:underline underline-offset-2 text-dark dark:text-light'>{title}</h2>
       </Link>
-      <p className='text-dark/75 font-semibold my-2'>{summary}</p>
-      <span className='text-primary font-semibold text-md'>{time}</span>
+      <p className='text-dark/75 font-semibold my-2 dark:text-light'>{summary}</p>
+      <span className='text-primary dark:text-primaryDark font-semibold text-md'>{time}</span>
     </li>
 
   </>

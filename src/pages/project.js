@@ -10,7 +10,9 @@ import { motion } from 'framer-motion'
 const FeatureProject = ({ type, title, link, github, img, para }) => {
     return <>
 
-        <motion.article className='w-full relative h-auto flex justify-between items-center space-x-5 p-16 border-dark bg-light border-2 border-solid rounded-3xl'
+        <motion.article className='w-full relative h-auto flex justify-between items-center space-x-5 p-16 border-dark bg-light border-2 border-solid rounded-3xl
+        dark:bg-dark dark:text-light dark:border-light
+        '
             whileHover={{ scale: 1.02 }}
             transition={{ duration: 0.5 }}
         >
@@ -18,11 +20,11 @@ const FeatureProject = ({ type, title, link, github, img, para }) => {
                 <Image src={img} alt='image' className='w-full h-auto' />
             </Link>
             <div className='w-1/2 flex flex-col items-start justify-between'>
-                <span className='text-xl text-primary font-bold'>{type}</span>
+                <span className='text-xl text-primary dark:text-primaryDark font-bold'>{type}</span>
                 <Link href={link} target='_blank' className='hover:underline underline-offset-2'>
                     <h1 className='font-bold text-3xl my-2'>{title}</h1>
                 </Link>
-                <p className='font-semibold text-dark/75'>{para}</p>
+                <p className='font-semibold text-dark/75 dark:text-light/75'>{para}</p>
                 <div className='flex justify-center items-center space-x-3 mt-4'>
                     <Link href={github} target='_blank' className='w-10'> <GithubIcon /> </Link>
                     <Link href={link} target='_blank' className='px-3 py-2 bg-dark rounded-lg text-light'>
@@ -38,7 +40,9 @@ const FeatureProject = ({ type, title, link, github, img, para }) => {
 const Project = ({ link, type, img, title, github }) => {
     return <>
 
-        <motion.article className='w-full h-auto flex flex-col justify-between items-center space-x-5 p-16 border-dark bg-light border-2 border-solid rounded-3xl'
+        <motion.article className='w-full h-auto flex flex-col justify-between items-center space-x-5 p-16 border-dark bg-light border-2 border-solid rounded-3xl
+        dark:bg-dark dark:text-light dark:border-light
+        '
             whileHover={{ scale: 1.02 }}
             transition={{ duration: 0.5 }}
         >
@@ -46,7 +50,7 @@ const Project = ({ link, type, img, title, github }) => {
                 <Image src={img} alt='image' className='w-full h-auto' />
             </Link>
             <div className='w-full flex flex-col items-start justify-between mt-3'>
-                <span className='text-xl text-primary font-bold'>{type}</span>
+                <span className='text-xl text-primary dark:text-primaryDark font-bold'>{type}</span>
                 <Link href={link} target='_blank' className='hover:underline underline-offset-2'>
                     <h1 className='font-bold text-2xl my-2'>{title}</h1>
                 </Link>

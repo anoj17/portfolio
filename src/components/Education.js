@@ -44,7 +44,9 @@ const Education = () => {
 
             <div ref={ref} className='w-[75%] mx-auto relative my-16'>
 
-                <motion.div style={{ scaleY: scrollYProgress }} className='w-1 rounded-full origin-top h-full bg-dark absolute top-0 left-9' />
+                <motion.div style={{ scaleY: scrollYProgress }} className='w-1 rounded-full origin-top h-full bg-dark absolute top-0 left-9
+                dark:bg-light
+                ' />
                 <ul className='w-full flex flex-col items-start justify-between ml-5'>
                     <Details
                         type={"Bachelor Of Science In Computer Science"}

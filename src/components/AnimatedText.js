@@ -31,7 +31,7 @@ const textSlide = {
 const AnimatedText = ({text, className=''}) => {
   return (
     <div className='w-full mx-auto overflow-hidden  flex items-center justify-center py-2 text-center'>
-        <motion.h1 className={`${className} text-8xl w-full font-bold capitalize text-dark inline-block`}
+        <motion.h1 className={`${className} text-8xl w-full font-bold capitalize text-dark inline-block dark:text-light`}
         variants={quote}
         initial="initial"
         animate="animate"
