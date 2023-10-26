@@ -37,7 +37,7 @@ const MovingImg = ({ img, link, title }) => {
       onMouseMove={handleMouse}
       onMouseLeave={handleMouseLeave}
     >
-      <h2 className='font-bold hover:underline'>{title}</h2>
+      <h2 className='font-bold hover:underline md:text-[15px] sm:text-[12px]'>{title}</h2>
 
       <MotionImg ref={ref} src={img} alt={title}
         className='w-96 h-auto rounded-lg hidden z-10 absolute'
@@ -52,7 +52,7 @@ const Article = ({ link, title, date, img }) => {
   return (
 
     <li className='w-full first:mt-0 flex relative justify-between items-center border-r-4 border-b-4 border border-dark border-solid p-5
-    m-5 rounded-2xl text-dark bg-light dark:bg-dark dark:border-light dark:text-light
+    m-5 rounded-2xl text-dark bg-light dark:bg-dark dark:border-light dark:text-light md:m-2 md:p-2
     '>
       <MovingImg img={img} link={link} title={title}
       />
@@ -66,7 +66,8 @@ const Featured = ({ link, img, time, summary, title }) => {
   return <>
 
     <li className='col-span-1 w-full p-4 border-dark bg-light border border-solid rounded-3xl
-    dark:bg-dark dark:border-light dark:text-light
+    dark:bg-dark dark:border-light dark:text-light lg:flex-col lg:p-12 md:p-8 sm:p-4 xs:p-4 
+    xs:rounded-2xl xs:rounded-b-3xl md:col-span-2
     '>
       <Link href={link} className='w-full cursor-pointer overflow-hidden rounded-lg'>
         <MotionImg src={img} alt='image' className='w-full h-auto rounded-lg'
@@ -75,7 +76,7 @@ const Featured = ({ link, img, time, summary, title }) => {
         />
       </Link>
       <Link href={link}>
-        <h2 className='font-bold my-2 text-3xl hover:underline underline-offset-2 text-dark dark:text-light'>{title}</h2>
+        <h2 className='font-bold my-2 text-3xl hover:underline md:text-2xl sm:text-xl underline-offset-2 text-dark dark:text-light'>{title}</h2>
       </Link>
       <p className='text-dark/75 font-semibold my-2 dark:text-light'>{summary}</p>
       <span className='text-primary dark:text-primaryDark font-semibold text-md'>{time}</span>
@@ -89,9 +90,10 @@ const article = () => {
 
     <main>
       <Layout className='pt-14'>
-        <AnimatedText text='Words Can Change The World! ' className='!text-7xl mb-10' />
+        <AnimatedText text='Words Can Change The World! ' className=' mb-10 !text-6xl md:!text-4xl sm:!text-2xl
+        md:mb-12 sm:mb-8' />
 
-        <ul className='grid grid-cols-2 gap-16'>
+        <ul className='grid grid-cols-2 gap-16 md:gap-8 sm:gap-4'>
           <Featured
             title=" Build A Custom Pagination Component In Reactjs From Scratch"
             link="/"
