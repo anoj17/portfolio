@@ -48,10 +48,10 @@ const NavBar = () => {
   }
 
   return (
-    <header className='w-full px-48 flex justify-between relative py-8 font-medium dark:text-light'>
+    <header className='w-full px-48 md:px-20 flex justify-between items-center relative py-8 font-medium  dark:text-light'>
 
       <div onClick={changeHamIcon}
-        className='hidden lg:flex justify-center items-center'
+        className='hidden lg:flex justify-center items-center '
       >
         {
           !changeIcon ?
@@ -61,7 +61,7 @@ const NavBar = () => {
         }
       </div>
 
-      <div className='w-full flex justify-center items-center lg:hidden'>
+      <div className='w-full flex justify-between items-center lg:hidden'>
         <nav>
           <CustomLink href={"/"} title='Home' className='mr-2' />
           <CustomLink href={"/about"} title='About' className='mx-2' />

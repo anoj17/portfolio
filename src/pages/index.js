@@ -23,13 +23,13 @@ export default function Home() {
             </div>
             <div className='w-1/2 flex flex-col justify-center items-center self-center lg:w-full lg:text-center'>
               <AnimatedText text={"Turning Vision Into Reality With Code And Design."} className='!text-5xl !text-left xl:!text-4xl lg:!text-5xl lg:!text-center sm:!text-3xl'/>
-              <p className='my-2 text-base font-semibold dark:text-light'>As a skilled full-stack developer, I am dedicated to turning ideas into innovative web applications.
+              <p className='my-2 text-base font-semibold dark:text-light md:text-[15px]'>As a skilled full-stack developer, I am dedicated to turning ideas into innovative web applications.
                 Explore my latest projects and articles, showcasing my expertise in React.js and web development.
               </p>
 
               <div className='flex w-full items-center justify-left mt-4 space-x-8 lg:justify-center'>
                 <Link href={"/dummy.pdf"} target='_blank'
-                  className='bg-dark text-light p-2.5 px-6 rounded-lg flex 
+                  className='bg-dark text-light p-2.5 px-6 rounded-lg flex md:p-2 md:px-3 md:text-lg 
               hover:bg-light hover:text-dark font-bold text-xl border-2 border-transparent hover:border-dark
               dark:bg-light dark:text-dark dark:hover:border-light dark:hover:bg-dark dark:hover:text-light
               '
@@ -41,7 +41,7 @@ export default function Home() {
                 </Link>
 
                 <Link href={"mailto:anojbudathoki17@gmail.com"} target='_blank'
-                  className='bg-dark text-light p-2.5 px-6 rounded-lg flex
+                  className='bg-dark text-light p-2.5 px-6 rounded-lg flex md:p-2 md:px-3 md:text-lg 
               hover:bg-light hover:text-dark font-bold text-xl border-2 border-transparent hover:border-dark
               dark:bg-light dark:text-dark dark:hover:border-light dark:hover:bg-dark dark:hover:text-light
               '

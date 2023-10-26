@@ -7,7 +7,9 @@ const Details = ({ position, company, companyLink, time, address, work }) => {
 const ref = useRef(null)
 
     return (
-        <li ref={ref} className='w-[60%] first:mt-0 last:mb-0 my-9 flex flex-col items-center justify-between mx-auto'>
+        <li ref={ref} className='w-[60%] first:mt-0 last:mb-0 my-9 flex flex-col items-center justify-between mx-auto
+        md:w-[75%]
+        '>
             
             <LiIcon reference={ref}/>
             <motion.div
@@ -17,9 +19,9 @@ const ref = useRef(null)
             whileInView={{y:0}}
             transition={{ duration: 1.5, type:"spring"}}
             >
-                <h2 className='font-bold text-2xl'>{position}&nbsp; <a href={companyLink} target='_blank' className=' text-primary dark:text-primaryDark'>@{company}</a></h2>
-                <span className='text-dark/75 font-semibold'>{time} | {address}</span>
-                <p className='w-full font-medium'>{work}</p>
+                <h2 className='font-bold text-2xl lg:text-xl sm:text-[17px]'>{position}&nbsp; <a href={companyLink} target='_blank' className=' text-primary dark:text-primaryDark'>@{company}</a></h2>
+                <span className='text-dark/75 font-semibold dark:text-light'>{time} | {address}</span>
+                <p className='w-full font-medium lg:text-[15px] md:text-[13px] sm:text-[12px]'>{work}</p>
             </motion.div>
         </li>
     )
@@ -38,13 +40,15 @@ const Experience = () => {
 
     return (
         <div
-            className='w-full mt-64'
+            className='w-full mt-64 lg:mt-48 md:mt-32 sm:mt-20'
         >
-            <h1 className='text-7xl font-bold text-center'>Experience</h1>
+            <h1 className='text-7xl font-bold text-center lg-text-5xl md:text-4xl sm:text-4xl'>Experience</h1>
 
-            <div ref={ref} className='w-[75%] mx-auto relative my-16'>
+            <div ref={ref} className='w-[75%] mx-auto relative my-16 lg:w-[90%] md:w-full'>
 
-                <motion.div style={{scaleY: scrollYProgress }}  className='w-1 dark:bg-light rounded-full origin-top h-full bg-dark absolute top-0 left-9' />
+                <motion.div style={{scaleY: scrollYProgress }}  className='w-1 dark:bg-light rounded-full origin-top h-full bg-dark absolute top-0 
+                left-9 '
+                 />
                 <ul className='w-full flex flex-col items-start justify-between ml-5'>
                     <Details
                         position={"Software Engineer"}
